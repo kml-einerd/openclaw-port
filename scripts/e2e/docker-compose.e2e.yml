@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  supabase:
+    image: supabase/postgres:15.1.0
+    environment:
+      POSTGRES_PASSWORD: postgres_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  pm-api:
+    build:
+      context: ../../
+      dockerfile: scripts/e2e/Dockerfile.e2e
+    environment:
+      - SUPABASE_URL=http://supabase:5432
+      - PM_ROLE=api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - supabase
+
+  pm-engine:
+    build:
+      context: ../../
+      dockerfile: scripts/e2e/Dockerfile.e2e
+    environment:
+      - SUPABASE_URL=http://supabase:5432
+      - PM_ROLE=engine
+    depends_on:
+      - supabase
+
+volumes:
+  db-data:

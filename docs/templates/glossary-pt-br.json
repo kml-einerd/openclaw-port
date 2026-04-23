@@ -1,0 +1,22 @@
+{
+  "Recipe": "Recipe",
+  "Wave": "Wave",
+  "Step": "Step (etapa de execução)",
+  "Gate": "Gate (verificador de qualidade)",
+  "Executor": "Executor (motor de execução LLM)",
+  "Brain": "Brain (classificador de intenção)",
+  "Veto": "Veto (rejeição de resultado)",
+  "Episode": "Episode (memória de tarefa)",
+  "Reconciler": "Reconciler (verificador periódico)",
+  "Skill": "Skill (habilidade do agente)",
+  "Sensor": "Sensor (gatilho externo)",
+  "Channel": "Channel (canal de comunicação)",
+  "Webhook": "Webhook (callback HTTP)",
+  "Provider": "Provider (provedor de modelo LLM)",
+  "Scope": "Scope (escopo de isolamento)",
+  "Tenant": "Tenant (inquilino/organização)",
+  "Artifact": "Artifact (artefato produzido)",
+  "Run": "Run (execução de recipe)",
+  "WorkItem": "WorkItem (unidade de trabalho)",
+  "Constraint": "Constraint (restrição de execução)"
+}
